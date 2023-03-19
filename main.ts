@@ -14,6 +14,7 @@ basic.forever(function () {
     if (detecta == 1 && maqueen.Ultrasonic(PingUnit.Centimeters) <= distGO) {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, vRot)
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, vRot)
+        basic.pause(1000)
         music.playTone(262, music.beat(BeatFraction.Quarter))
     }
     if (detecta == 0 || maqueen.Ultrasonic(PingUnit.Centimeters) >= distGO) {
